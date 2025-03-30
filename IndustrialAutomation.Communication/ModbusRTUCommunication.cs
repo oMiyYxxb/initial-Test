@@ -32,8 +32,7 @@ namespace IndustrialAutomationApp.IndustrialAutomation.Communication
                 StopBits = StopBits,
                 Parity = Parity
             };
-        }
-       
+        }    
         public event Action<string> OnStatusChanged;
         // 初始化通信
         public bool Initialize()
