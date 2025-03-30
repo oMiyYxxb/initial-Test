@@ -33,7 +33,6 @@ namespace IndustrialAutomationApp.IndustrialAutomation.Communication
                 Parity = Parity
             };
         }
-        public string LastErrorMessage { get; private set; }
         // 初始化通信
         public bool Initialize()
         {
