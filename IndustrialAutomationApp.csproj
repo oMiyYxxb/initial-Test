@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NModbus4, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\NModbus4.2.1.0\lib\net40\NModbus4.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -74,12 +77,15 @@
     <Compile Include="IndustrialAutomation.Business\DataProcessor.cs" />
     <Compile Include="IndustrialAutomation.Business\DeviceControl.cs" />
     <Compile Include="IndustrialAutomation.Communication\CommunicationManager.cs" />
-    <Compile Include="IndustrialAutomation.Communication\ModbusCommunication.cs" />
+    <Compile Include="IndustrialAutomation.Communication\ModbusRTUCommunication.cs" />
     <Compile Include="IndustrialAutomation.Communication\OPCCommunication.cs" />
     <Compile Include="IndustrialAutomation.Data\DatabaseManager.cs" />
     <Compile Include="IndustrialAutomation.Data\DataModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="IndustrialAutomationApp\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -89,6 +95,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
