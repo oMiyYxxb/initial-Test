@@ -33,6 +33,8 @@ namespace IndustrialAutomationApp.IndustrialAutomation.Communication
                 Parity = Parity
             };
         }
+       
+        public event Action<string> OnStatusChanged;
         // 初始化通信
         public bool Initialize()
         {
@@ -130,8 +132,7 @@ namespace IndustrialAutomationApp.IndustrialAutomation.Communication
             }
         }
 
-        // 用于事件通知
-        public event Action<string> OnStatusChanged;
+       
         
     }
 }
